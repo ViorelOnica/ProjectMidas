@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">Midas_Project</string>
+
+    <string-array name="currency_array">
+        <item>USD</item>
+        <item>EUR</item>
+        <item>RON</item>
+    </string-array>
+
+    <string-array name="month_array">
+        <item>Month</item>
+        <item>January</item>
+        <item>February</item>
+        <item>March</item>
+        <item>April</item>
+        <item>May</item>
+        <item>June</item>
+        <item>July</item>
+        <item>August</item>
+        <item>September</item>
+        <item>October</item>
+        <item>November</item>
+        <item>December</item>
+    </string-array>
+
+</resources>

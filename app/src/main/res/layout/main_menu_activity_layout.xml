@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#000"
+        android:id="@+id/relativeLayout2">
+
+        <ProgressBar
+            android:id="@+id/bufferingProgressBar"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/homeTextView"
+            android:layout_marginRight="15dp"
+            android:indeterminateTint="#50b1a6"
+            android:visibility="invisible" />
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="35dp"
+            android:id="@+id/avatarImageButton"
+            android:src="@drawable/avatar_icon"
+            android:background="@null"
+            android:scaleType="fitXY"
+            android:layout_margin="5dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/homeTextView"
+            android:text="Home"
+            android:textColor="#fff"
+            android:textSize="17sp"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/avatarImageButton"
+            android:layout_marginLeft="10dp"
+            />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="25dp"
+            android:id="@+id/verticalBar"
+            android:background="#fff"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/homeTextView"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/addCompanyTextView"
+            android:text="Add company"
+            android:textColor="#fff"
+            android:textSize="17sp"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/verticalBar"
+            />
+
+        <ImageButton
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="@drawable/loup_icon"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@null"
+            android:scaleType="fitXY"
+            android:layout_margin="5dp"
+            />
+
+        <com.example.sunquest.midas_project.CustomEditText
+            android:layout_width="280dp"
+            android:layout_height="25dp"
+            android:id="@+id/companySearchEditText"
+            android:textColor="#000"
+            android:textSize="20sp"
+            android:hint="Company name"
+            android:textAlignment="center"
+            android:background="@android:color/transparent"
+            android:textColorHint="#B3ffffff"
+            android:textCursorDrawable="@null"
+            android:singleLine="true"
+            android:imeOptions="actionDone"
+            android:inputType="textNoSuggestions"
+            android:layout_toRightOf="@+id/avatarImageButton"
+            android:layout_marginLeft="10dp"
+            android:layout_centerVertical="true"
+            android:visibility="invisible"
+            />
+
+    </RelativeLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/companyListRecyclerView"
+        android:layout_below="@+id/relativeLayout2"
+        android:layout_above="@+id/horizontalLine1"
+        >
+    </android.support.v7.widget.RecyclerView>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/extractingDataBufferingArea"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="10dp"
+        android:visibility="invisible"
+        >
+        <ProgressBar
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:id="@+id/extractingDataBufferingProgressBar"
+            android:layout_centerVertical="true"
+            android:indeterminateTint="#50b1a6"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Extracting data.."
+            android:textSize="18sp"
+            android:textColor="#50b1a6"
+            android:layout_toRightOf="@+id/extractingDataBufferingProgressBar"
+            android:layout_marginLeft="10dp"
+            />
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/filterByTextView"
+        android:text="Filter by"
+        android:textSize="18sp"
+        android:textColor="#fff"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="10dp"
+        />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:id="@+id/horizontalLine1"
+        android:background="#fff"
+        android:layout_above="@+id/filterByTextView"
+        />
+
+</RelativeLayout>

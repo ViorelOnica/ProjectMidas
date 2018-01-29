@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/white_dialog_shape"
+    >
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/topArea"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/reviewsTextView"
+            android:textSize="16sp"
+            android:text="Reviews"
+            android:textColor="#000"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="10dp"
+            />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#d4d4d4"
+            android:layout_below="@+id/reviewsTextView"
+            />
+
+    </RelativeLayout>
+
+    <ProgressBar
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:id="@+id/topProgressBar"
+        android:indeterminateTint="#50b1a6"
+        android:layout_below="@+id/topArea"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:visibility="invisible"
+        />
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/commentariesListRecyclerView"
+        android:layout_below="@+id/topArea"
+        android:layout_above="@id/bottomArea"
+        />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/bottomArea"
+        android:layout_alignParentBottom="true"
+        >
+
+
+        <ProgressBar
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:id="@+id/postingBufferingProgressBar"
+            android:layout_centerVertical="true"
+            android:indeterminateTint="#50b1a6"
+            android:layout_marginLeft="10dp"
+            android:visibility="invisible"
+            />
+        <com.example.sunquest.midas_project.CustomEditText
+            android:layout_width="290dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/writeCommentEditText"
+            android:textColor="#000"
+            android:textSize="16sp"
+            android:hint="Write a comment"
+            android:background="@drawable/edittext_comment_shape"
+            android:textCursorDrawable="@null"
+            android:singleLine="true"
+            android:imeOptions="actionDone"
+            android:inputType="textNoSuggestions"
+            android:layout_toRightOf="@id/postingBufferingProgressBar"
+            android:layout_margin="10dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#d4d4d4"
+            />
+
+        <ImageButton
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:id="@+id/sendImageButton"
+            android:src="@drawable/send_icon"
+            android:background="@null"
+            android:scaleType="fitXY"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:layout_centerVertical="true"
+            />
+
+    </RelativeLayout>
+</RelativeLayout>

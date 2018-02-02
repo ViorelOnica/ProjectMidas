@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/dialog_shape"
+    >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/connectionLostTextView"
+        android:text="Connection lost !"
+        android:textSize="20sp"
+        android:textColor="#fff"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        />
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/bottomButtonsArea"
+        android:layout_below="@+id/connectionLostTextView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginBottom="15dp"
+        >
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/reconnectArea"
+            >
+            <ImageButton
+                android:layout_width="100dp"
+                android:layout_height="35dp"
+                android:id="@+id/reconnectImageButton"
+                android:src="@drawable/rectangle_shape"
+                android:background="@null"
+                android:scaleType="fitXY"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Reconnect"
+                android:textSize="18sp"
+                android:textColor="#fff"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/exitArea"
+            android:layout_toRightOf="@id/reconnectArea"
+            android:layout_marginLeft="20dp"
+            >
+            <ImageButton
+                android:layout_width="100dp"
+                android:layout_height="35dp"
+                android:id="@+id/exitImageButton"
+                android:src="@drawable/rectangle_shape"
+                android:background="@null"
+                android:scaleType="fitXY"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Exit"
+                android:textSize="18sp"
+                android:textColor="#fff"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                />
+        </RelativeLayout>
+    </RelativeLayout>
+
+
+
+</RelativeLayout>

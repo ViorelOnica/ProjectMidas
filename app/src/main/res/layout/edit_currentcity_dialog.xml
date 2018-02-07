@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/dialog_shape"
+    >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editCurrentCityTextView"
+        android:text="Edit current city"
+        android:textSize="22sp"
+        android:textColor="#fff"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        />
+    <com.example.sunquest.midas_project.CustomEditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/currentCityEditText"
+        android:textColor="#fff"
+        android:textSize="18sp"
+        android:hint="Current city"
+        android:textAlignment="center"
+        android:background="@android:color/transparent"
+        android:textColorHint="#B3ffffff"
+        android:textCursorDrawable="@null"
+        android:singleLine="true"
+        android:imeOptions="actionDone"
+        android:inputType="textNoSuggestions"
+        android:layout_below="@+id/editCurrentCityTextView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        />
+    <View
+        android:layout_width="150dp"
+        android:layout_height="1dp"
+        android:id="@+id/horizontalLine"
+        android:background="#fff"
+        android:layout_below="@+id/currentCityEditText"
+        android:layout_centerHorizontal="true"
+        />
+
+    <ImageView
+        android:id="@+id/currentCityValidationSign"
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:layout_above="@+id/bottomButtonsArea"
+        android:layout_toEndOf="@+id/horizontalLine"
+        android:layout_toRightOf="@+id/horizontalLine"
+        android:src="@drawable/invalid_x_sign"
+        android:layout_marginLeft="70dp"
+        android:layout_marginBottom="5dp"
+        android:visibility="invisible"
+        />
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/bottomButtonsArea"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/horizontalLine"
+        android:layout_marginTop="35dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        >
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/saveArea"
+            >
+            <ImageButton
+                android:layout_width="80dp"
+                android:layout_height="30dp"
+                android:id="@+id/saveButton"
+                android:src="@drawable/rectangle_shape"
+                android:background="@null"
+                android:scaleType="fitXY"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/saveText"
+                android:text="Save"
+                android:textSize="17sp"
+                android:textColor="#fff"
+                android:layout_centerInParent="true"
+                />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/saveArea"
+            android:layout_marginLeft="25dp"
+            >
+            <ImageButton
+                android:layout_width="80dp"
+                android:layout_height="30dp"
+                android:id="@+id/cancelButton"
+                android:src="@drawable/rectangle_shape"
+                android:background="@null"
+                android:scaleType="fitXY"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/cancelText"
+                android:text="Cancel"
+                android:textSize="17sp"
+                android:textColor="#fff"
+                android:layout_centerInParent="true"
+                />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editingFailedMessageTextView"
+        android:text="Editing failed"
+        android:textColor="#ad0000"
+        android:textSize="18sp"
+        android:layout_below="@+id/bottomButtonsArea"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:visibility="invisible"
+        />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editingBufferingArea"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/bottomButtonsArea"
+        android:layout_marginTop="10dp"
+        android:visibility="invisible"
+        >
+        <ProgressBar
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:id="@+id/editingBufferingProgressBar"
+            android:layout_centerVertical="true"
+            android:indeterminateTint="#50b1a6"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Editing.."
+            android:textSize="18sp"
+            android:textColor="#50b1a6"
+            android:layout_toRightOf="@+id/editingBufferingProgressBar"
+            android:layout_marginLeft="10dp"
+            />
+
+    </RelativeLayout>
+
+</RelativeLayout>

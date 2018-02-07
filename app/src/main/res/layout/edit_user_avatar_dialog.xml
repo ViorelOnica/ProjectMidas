@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/dialog_shape"
+    >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/selectPictureTextView"
+        android:text="Select picture"
+        android:textSize="22sp"
+        android:textColor="#fff"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        />
+
+    <ImageButton
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:id="@+id/avatarImageButton"
+        android:src="@drawable/no_image_icon"
+        android:background="@null"
+        android:scaleType="fitXY"
+        android:layout_below="@+id/selectPictureTextView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/hintTextView"
+        android:text="Square resolution for a better quality."
+        android:textSize="16sp"
+        android:textColor="#fff"
+        android:textAlignment="center"
+        android:layout_below="@+id/avatarImageButton"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/bottomButtonsArea"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/hintTextView"
+        android:layout_marginTop="25dp"
+        >
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/saveArea"
+            >
+            <ImageButton
+                android:layout_width="80dp"
+                android:layout_height="30dp"
+                android:id="@+id/saveButton"
+                android:src="@drawable/rectangle_shape"
+                android:background="@null"
+                android:scaleType="fitXY"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/saveText"
+                android:text="Save"
+                android:textSize="17sp"
+                android:textColor="#fff"
+                android:layout_centerInParent="true"
+                />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/saveArea"
+            android:layout_marginLeft="25dp"
+            >
+            <ImageButton
+                android:layout_width="80dp"
+                android:layout_height="30dp"
+                android:id="@+id/cancelButton"
+                android:src="@drawable/rectangle_shape"
+                android:background="@null"
+                android:scaleType="fitXY"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/cancelText"
+                android:text="Cancel"
+                android:textSize="17sp"
+                android:textColor="#fff"
+                android:layout_centerInParent="true"
+                />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/uploadFailedMessageTextView"
+        android:text="Upload failed"
+        android:textColor="#ad0000"
+        android:textSize="18sp"
+        android:layout_below="@+id/bottomButtonsArea"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:visibility="invisible"
+        />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/uploadingBufferingArea"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/bottomButtonsArea"
+        android:layout_marginTop="10dp"
+        android:visibility="invisible"
+        >
+        <ProgressBar
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:id="@+id/uploadingBufferingProgressBar"
+            android:layout_centerVertical="true"
+            android:indeterminateTint="#50b1a6"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Uploading.."
+            android:textSize="18sp"
+            android:textColor="#50b1a6"
+            android:layout_toRightOf="@+id/uploadingBufferingProgressBar"
+            android:layout_marginLeft="10dp"
+            />
+
+    </RelativeLayout>
+
+
+</RelativeLayout>
